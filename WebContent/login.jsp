@@ -5,17 +5,69 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login</title>
+<style>
+#form-wrapper {
+	width: 300px;
+	margin: auto;
+}
+
+form div {
+	padding: 5px !important;
+}
+
+form fieldset{
+	border-radius:16px;
+}
+
+form label{
+	width:100%;
+	text-align: center;
+}
+
+form input{
+	width:100%;
+	padding: 5px 0;
+}
+
+#login-btn-wrapper {
+	text-align: center !important;
+}
+
+#login-btn {
+	background: #3498db;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	border:none;
+	width:100px;
+}
+
+#login-btn:hover {
+	background: #3cb0fd;
+	text-decoration: none;
+	cursor:pointer;
+}
+</style>
 </head>
 <body>
-	<div>
+	<div id="form-wrapper">
 		<form method="post" action="/Acesso/Login">
 			<fieldset>
-				<legend>Login</legend>
-				<label for="username">Username</label>
-				<input type="text" name="username" placeholder="Username">
-				<label for="password">Password</label>
-				<input type="password" name="password" placeholder="Password">
-				<input type="submit" name="login" value="Acessar"/>
+				<legend style="text-align: center">LOGIN</legend>
+				<div>
+					<label for="username">Username</label>
+					<input type="text" name="username" placeholder="Username">
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="Password">
+				</div>
+				<div id="login-btn-wrapper">
+					<input type="submit" name="login" id="login-btn" value="Acessar"/>
+				</div>
 			</fieldset>
 		</form>
 	</div>

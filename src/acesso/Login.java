@@ -44,6 +44,7 @@ public class Login extends HttpServlet {
 		//Instancia os usuarios
 		Usuario usuario = new Usuario("admin", "admin");
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		usuarios.add(usuario);
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -59,7 +60,7 @@ public class Login extends HttpServlet {
 			}
 		}
 		
-		String url = "faile.jsp";
+		String url = "fail.jsp";
 		if(valido){
 			url = "success.jsp";
 		}
